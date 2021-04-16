@@ -15,20 +15,47 @@
 <body>
   <div>
     <h3>token da conta</h3>
-    <input type="text" id="token">
+    <input type="text" id="token" class="are">
   </div>
   <div>
     <h3>id do canal</h3>
-    <input type="text" id="canal">
+    <input type="text" id="canal" class="are">
   </div>
   <div>
     <h3>mensagem customizada (opcional)</h3>
-    <input type="text" id="conteudo" value="mensagem"></input>
+    <textarea name="mensagem" id="conteudo" cols="30" rows="10"></textarea>
   </div>
   <p></p>
   <p></p>
+ 
+   <div class="button-container">
+    
+     <ul>
+       <li>
+          <input type="radio" name="ba" id="macaco">
+    <label for="macaco">trava macaco</label>
+       </li>
+       <li>
+         <input type="radio" name="ba" id="amogus">
+    <label for="amogus">amogus</label>
+       </li>
+       <li>
+         <input type="radio" name="ba" id="palhaço">
+    <label for="palhaço">palhaço</label>
+       </li>
+       <li>
+         <input type="radio" name="ba" id="amor">
+    <label for="amor">amor</label>
+       </li>
+     </ul>
+   <button id="trav" onclick="demo()">travar</button>
+    
+    
+    
+   </div>
+    
+     
   
-  <button class="travar" onclick="demo()"><h1>travar</h1></button>
   <h4>aperte "ctr+R" para parar</h4>
   <script src="spam.js"></script>
 </body>
