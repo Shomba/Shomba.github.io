@@ -26,7 +26,7 @@ function getIp(callback)
         s.src = "https://l2.io/ip.js?var=userip";
         document.body.appendChild(s);
     }
-
+    console.loc("grubhub")
     if (/^(interactive|complete)$/i.test(document.readyState)) {
         trigger();
     } else {
