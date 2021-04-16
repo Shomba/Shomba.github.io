@@ -2,7 +2,7 @@ function mensagem() {
     var conteudo = document.getElementById("msg").value;
     var link = document.getElementById("cabeca").value;
     console.log(conteudo);
-    fetch(cabeca, {
+    fetch(link, {
   "headers": {
     "accept": "*/*",
     "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
