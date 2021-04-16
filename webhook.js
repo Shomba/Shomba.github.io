@@ -1,8 +1,8 @@
 function mensagem() {
     var conteudo = document.getElementById("msg").value;
-    var link = document.getElementById("cabeca");
+    var link = document.getElementById("cabeca").value;
     console.log(conteudo);
-    fetch("https://discord.com/api/webhooks/832422766674313247/KPb6swO9cs-NgCAaFhVcDaHJFKCaGo8qObspOEKjkkHKfo8JI5afAIH_tnygz3LNdpHH?wait=true", {
+    fetch(cabeca, {
   "headers": {
     "accept": "*/*",
     "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
