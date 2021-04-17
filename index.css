@@ -35,6 +35,7 @@ button{
 }
 .button-container {
   width: 90%;
+  margin: auto;
   background-color: #404b5c;
   overflow-y: auto;
 }
@@ -56,8 +57,10 @@ button{
   border: #0a1831;
 }
 
-.button-container > button{
+.button-container > button {
   float: left;
+  
+  width: 30%;
   background-color: #15243d;
   text-align: center;
   text-size-adjust: inherit;
@@ -65,4 +68,7 @@ button{
   margin: 15px;
   font-size: xx-large;
   border: #0a1831;
+}
+.button-container > button >img {
+  width: 90%;
 }
