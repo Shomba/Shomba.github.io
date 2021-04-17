@@ -21,7 +21,7 @@
     </style>
     
 </head >
-<body>
+<body >
 <audio src="wide.mp3" autoplay loop></audio>
 <script>
     var wide = 128
@@ -32,6 +32,16 @@ var loop = function() {
         window.moveTo(Math.random()* window.screen.width,Math.random()* window.screen.height);
         setTimeout(loop, FRAME);
 };
+setTimeout(loop, FRAME);
+</script>
+<script>
+  document.addEventListener("keypress", function(event) {
+  if (event.altKey) {
+    window.open('wide.html','','height=256,width=128' )
+    console.log(event.keyCode)
+  }
+});
+
 setTimeout(loop, FRAME);
 </script>
 </body>

