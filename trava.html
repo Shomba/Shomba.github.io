@@ -7,23 +7,22 @@
 
   <link rel="stylesheet" href="trava.css">
   <link rel="icon" href="src/icon.png">
-  <script src="trava.js">
-  </script>
-
+  
 </head>
 
 <body>
+  <script src="spam.js"></script>
   <div>
     <h3>token da conta</h3>
-    <input type="text" id="token" class="are">
+    <input type="text" id="token" class="are" value="token" >
   </div>
   <div>
     <h3>id do canal</h3>
-    <input type="text" id="canal" class="are">
+    <input type="text" id="canal" class="are" value="id do canal">
   </div>
   <div>
     <h3>mensagem customizada (opcional)</h3>
-    <textarea name="mensagem" id="conteudo" cols="30" rows="10"></textarea>
+    <textarea name="mensagem" id="conteudo"  cols="30" rows="10">mensagem</textarea>
   </div>
   <p></p>
   <p></p>
@@ -32,11 +31,11 @@
     
      <ul>
        <li>
-          <input type="radio" name="ba" id="macaco">
+          <input type="radio" name="ba" id="macaco" checked="checked" onclick="mamaco()">
     <label for="macaco">trava macaco</label>
        </li>
        <li>
-         <input type="radio" name="ba" id="amogus">
+         <input type="radio" name="ba" id="amogus" onclick="amogus()">
     <label for="amogus">amogus</label>
        </li>
        <li>
@@ -57,7 +56,7 @@
      
   
   <h4>aperte "ctr+R" para parar</h4>
-  <script src="spam.js"></script>
+  
 </body>
 
 </html>

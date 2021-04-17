@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>putin</title>
+  
+    <style>
+        body {
+  background-image: url('maxresdefault.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+        #puts{
+            
+        width: 256px  ;
+        height:512px;
+         background-color: aqua;
+        }
+    </style>
+    
+</head >
+<body>
+<audio src="wide.mp3" autoplay loop></audio>
+<script>
+    var wide = 128
+    var FRAME = 100 ;
+var loop = function() {
+        window.resizeTo(wide,256);
+        wide++;
+        window.moveTo(Math.random()* window.screen.width,Math.random()* window.screen.height);
+        setTimeout(loop, FRAME);
+};
+setTimeout(loop, FRAME);
+</script>
+</body>
+
+</html>

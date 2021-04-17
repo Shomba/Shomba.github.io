@@ -34,14 +34,29 @@ button{
   
 }
 .button-container {
-  width: 490px;
+  width: 90%;
   background-color: #404b5c;
   overflow-y: auto;
 }
+#putin{
+  width: 16;
+  height: 16;
+  
+}
+.button-container > input {
+  float: left;
+  height: 64px;
+  width: 64px;
+  background-color: #15243d;
+  text-align: center;
+  text-size-adjust: inherit;
+  border-radius: 10px;
+  margin: 15px;
+  font-size: xx-large;
+  border: #0a1831;
+}
 
-.button-container > button {
-  width: 215px;
-  height: 215px;
+.button-container > button{
   float: left;
   background-color: #15243d;
   text-align: center;
