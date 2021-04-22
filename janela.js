@@ -10,3 +10,11 @@ function wide() {
     
     
 }
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    // true for mobile device
+    document.getElementById("ceeses").href = ("index_m.css")
+  }else{
+    // false for not mobile device
+    document.getElementById("ceeses").href = ("index.css")
+  }
+  

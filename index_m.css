@@ -1,0 +1,74 @@
+body {
+  border: #14171c;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #404b5c;
+  
+  padding-left: 5px;
+}
+input{
+  background-color: #242b36;
+  font-size: small;
+  border-radius: 5px;
+  height: 30px;
+  width: 400px;
+  border-color: #14171c;
+}
+button{
+  background-color: #15243d;
+  border-radius: 5px;
+  border: 5px #01003b;
+  padding-left: 5px;
+  padding-bottom: 1px;
+}
+
+.travar {
+  margin: auto;
+  width: 25%;
+  text-align: center;
+  border: 3px #01003b ;
+  border-radius: 5px;
+  padding: 1px;
+}
+.centro{
+  margin: auto;
+  
+}
+.button-container {
+  
+  width: 99%;
+  margin: auto;
+ 
+  overflow-y: auto;
+}
+#putin{
+  width: 16;
+  height: 16;
+  
+}
+.button-container > input {
+  float: left;
+  height: 64px;
+  width: 64px;
+  background-color: #15243d;
+  text-align: center;
+  text-size-adjust: inherit;
+  border-radius: 10px;
+  margin: 15px;
+  font-size: xx-large;
+  border: #0a1831;
+}
+.button-container > button {
+  float: left;
+  
+  width: 90%;
+  background-color: #15243d;
+  text-align: center;
+  text-size-adjust: inherit;
+  border-radius: 10px;
+  margin: 15px;
+  font-size: xx-large;
+  border: #0a1831;
+}
+.button-container > button >img {
+  width: 90%;
+}
