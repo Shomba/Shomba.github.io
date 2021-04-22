@@ -29,6 +29,7 @@ body {
   }
   .travar {
     margin: auto;
+    text-decoration-color: black;
     width: 25%;
     text-align: center;
     border: 3px #01003b ;
