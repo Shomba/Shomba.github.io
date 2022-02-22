@@ -2,113 +2,104 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Trava Discord</title>
-  <link id="ceeses" rel="stylesheet" href="index.css">
-  <script src="janela.js"></script>
+    <meta charset="UTF-8">
+    <title>Trava Discord</title>
+    <link id="ceeses" rel="stylesheet" href="index.css">
+    <script src="janela.js"></script>
 
 </head>
-<body>
-  <script>
-    const print = console.log
-async function main() {
-    while(true){
-        await fetch("https://gyruss.rdops.systems/v2/conversions.json", {
-            "credentials": "include",
-            "headers": {
-                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0",
-                "Accept": "application/json, text/javascript, */*; q=0.01",
-                "Accept-Language": "pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3",
-                "Content-Type": "application/json; charset=UTF-8",
-                "Authorization": "PublicToken 16bd1833a2dc900970baf365e45a8711",
-                "Sec-Fetch-Dest": "empty",
-                "Sec-Fetch-Mode": "cors",
-                "Sec-Fetch-Site": "cross-site"
-            },
-            "referrer": "https://storefamily.plurall.net/",
-            "body": JSON.stringify({
-                "client_tracking_id": "",
-                "query_params": "",
-                "conversion_identifier": "jogajunto",
-                "internal_source": "2",
-                "_rd_experiment_content_id": "",
-                "c_utmz": "",
-                "traffic_source": "encoded_eyJmaXJzdF9zZXNzaW9uIjp7InZhbHVlIjoiaHR0cHM6Ly9sb2dpbi5wbHVyYWxsLm5ldC8iLCJleHRyYV9wYXJhbXMiOnt9fSwiY3VycmVudF9zZXNzaW9uIjp7InZhbHVlIjoiKG5vbmUpIiwiZXh0cmFfcGFyYW1zIjp7fX0sImNyZWF0ZWRfYXQiOjE2NDU1NTc4MTQ0Njd9",
-                "privacy_data": {
-                    "browser": "",
-                    "consent": "0",
-                    "consent_privacy_policy": "1"
-                },
-                "name": get.name(),
-                "email": get.name() + "@gmail.com",
-                "cf_voce_e_um_a": "Aluno(a)",
-                "": "",
-                "cf_qual_e_o_seu_telefone": get.name(),
-                "cf_qual_e_o_seu_login_no_plurall": get.name(),
-                "cf_como_te_acho_nas_redes_sociais": get.name(),
-                "captcha": "13",
-                "emP7yF13ld": "",
-                "sh0uldN07ch4ng3": "should_not_change",
-                "redirect_to": "https://storefamily.plurall.net/agradecimento-jogajunto"
-            }),
-            "method": "POST",
-            "mode": "cors"
-        }).then(async res => {
-            if (res.status != 200) {
-                print(`error: ${res.status}`)
-                sleep(5000)
-            }
-            else {
-                print("OK")
 
+<body>
+    <script>
+        const print = console.log
+        async function main() {
+            while (true) {
+                await fetch("https://gyruss.rdops.systems/v2/conversions.json", {
+                    "credentials": "include",
+                    "headers": {
+                        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0",
+                        "Accept": "application/json, text/javascript, */*; q=0.01",
+                        "Accept-Language": "pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3",
+                        "Content-Type": "application/json; charset=UTF-8",
+                        "Authorization": "PublicToken 16bd1833a2dc900970baf365e45a8711",
+                        "Sec-Fetch-Dest": "empty",
+                        "Sec-Fetch-Mode": "cors",
+                        "Sec-Fetch-Site": "cross-site"
+                    },
+                    "referrer": "https://storefamily.plurall.net/",
+                    "body": JSON.stringify({
+                        "client_tracking_id": "",
+                        "query_params": "",
+                        "conversion_identifier": "jogajunto",
+                        "internal_source": "2",
+                        "_rd_experiment_content_id": "",
+                        "c_utmz": "",
+                        "traffic_source": "encoded_eyJmaXJzdF9zZXNzaW9uIjp7InZhbHVlIjoiaHR0cHM6Ly9sb2dpbi5wbHVyYWxsLm5ldC8iLCJleHRyYV9wYXJhbXMiOnt9fSwiY3VycmVudF9zZXNzaW9uIjp7InZhbHVlIjoiKG5vbmUpIiwiZXh0cmFfcGFyYW1zIjp7fX0sImNyZWF0ZWRfYXQiOjE2NDU1NTc4MTQ0Njd9",
+                        "privacy_data": {
+                            "browser": "",
+                            "consent": "0",
+                            "consent_privacy_policy": "1"
+                        },
+                        "name": name(),
+                        "email": name() + "@gmail.com",
+                        "cf_voce_e_um_a": "Aluno(a)",
+                        "": "",
+                        "cf_qual_e_o_seu_telefone": name(),
+                        "cf_qual_e_o_seu_login_no_plurall": name(),
+                        "cf_como_te_acho_nas_redes_sociais": name(),
+                        "captcha": "13",
+                        "emP7yF13ld": "",
+                        "sh0uldN07ch4ng3": "should_not_change",
+                        "redirect_to": "https://storefamily.plurall.net/agradecimento-jogajunto"
+                    }),
+                    "method": "POST",
+                    "mode": "cors"
+                }).then(async res => {
+                    if (res.status != 200) {
+                        print(`error: ${res.status}`)
+                        sleep(5000)
+                    }
+                    else {
+                        print("OK")
+
+                    }
+                });
+                //await sleep(50)
             }
-        });
-        //await sleep(50)
-    }
-}
-function sleep(ms) {
-    return new Promise((resolve) => {
-        setTimeout(resolve, ms);
-    });
-}
-class get {
-    chars = `1̶̛̫̼͓̉́̌̂̒̐̄̊͌͑̈͆͐̓̋̚͘͜2̵̧͚̺͉͕̙͖̳̲͒̏̀͛̎́̾͊̔̅͗̆̃̕͝͠3̷̨̡̩̠̝̰̯͔̦̪̥̣̞̻̱̮͍͇̈́̽̀̓̑̍̿ͅ4̤͈̹͂̇5̘̟̭6̜͙̗7̢͎̬8̸9͋0̖-=qwe̴rtyuiop´[]sdfghjklç~zxcvbnm,.;/"!@#$%¨&*()_+WERTYUIOP{}ASDFGHJKLÇ^|ZXCVBNM<>:?¹²³£¢¬§°®ŧ←↓→øþªºæßðđŋħˀĸłˇ«»©„“”µ· ⁴⁵⁶⁷⁸⁹⁰`
-    chaos = `̴ ̂ ̿ ̓ ̆ ͘ ́ ̍ ̅ ͌ ̕  ̐  ͗ ̖ ̧ ̼ ͚ ̩ ͇ ͅ ̝ ͖ ̮  ̗  ͓ ̱ ̘ ̡ ̭ ̜ ̻ ̟ ̲ ̨ ͎  ̣  ̶ ̈ ͛ ͋ ̋ ̢ ̳ ̥ ̬ ̤ ̰  ̹  ͕ ̙ ̷ ͝ ͂ ̀ ̊ ͆ ́ ̚ ̾  ̛  ̠ ̸ ͊ ̔ ̃ ̏ ̈́ ͒ ͐ ͠ ̽  ̌  ͑ ̓ ̀ ͜ ͈ ͍ ̪ ̄ ̎ ̇ ̉  ̑  ̦ ͔ ̯ ͙ ̺ ̫`
-    mail() {
-        var name = ""
-        for (let index = 0; index < Math.floor(Math.random * 10 + 10); index++) {
-            for (let i = 0; i < Math.floor(Math.random * 10 + 10); i++) {
-                name += random(this.chaos);
-            }
-            name += random(this.chars);
         }
-        name += "@gmail.com"
-        return name
-    }
-    name() {
-        {
+        function sleep(ms) {
+            return new Promise((resolve) => {
+                setTimeout(resolve, ms);
+            });
+        }
+
+        chars = `1̶̛̫̼͓̉́̌̂̒̐̄̊͌͑̈͆͐̓̋̚͘͜2̵̧͚̺͉͕̙͖̳̲͒̏̀͛̎́̾͊̔̅͗̆̃̕͝͠3̷̨̡̩̠̝̰̯͔̦̪̥̣̞̻̱̮͍͇̈́̽̀̓̑̍̿ͅ4̤͈̹͂̇5̘̟̭6̜͙̗7̢͎̬8̸9͋0̖-=qwe̴rtyuiop´[]sdfghjklç~zxcvbnm,.;/"!@#$%¨&*()_+WERTYUIOP{}ASDFGHJKLÇ^|ZXCVBNM<>:?¹²³£¢¬§°®ŧ←↓→øþªºæßðđŋħˀĸłˇ«»©„“”µ· ⁴⁵⁶⁷⁸⁹⁰`
+        chaos = `̴ ̂ ̿ ̓ ̆ ͘ ́ ̍ ̅ ͌ ̕  ̐  ͗ ̖ ̧ ̼ ͚ ̩ ͇ ͅ ̝ ͖ ̮  ̗  ͓ ̱ ̘ ̡ ̭ ̜ ̻ ̟ ̲ ̨ ͎  ̣  ̶ ̈ ͛ ͋ ̋ ̢ ̳ ̥ ̬ ̤ ̰  ̹  ͕ ̙ ̷ ͝ ͂ ̀ ̊ ͆ ́ ̚ ̾  ̛  ̠ ̸ ͊ ̔ ̃ ̏ ̈́ ͒ ͐ ͠ ̽  ̌  ͑ ̓ ̀ ͜ ͈ ͍ ̪ ̄ ̎ ̇ ̉  ̑  ̦ ͔ ̯ ͙ ̺ ̫`
+        function name() {
+
             var name = ""
             for (let index = 0; index < Math.floor(Math.random * 10 + 10); index++) {
                 for (let i = 0; i < Math.floor(Math.random * 10 + 10); i++) {
-                    name += random(this.chaos);
+                    name += random(chaos);
                 }
-                name += random(this.chars);
+                name += random(chars);
             }
-            name += "@gmail.com"
-        }
-    }
-}
+            
+            return name
 
-function random(list) {
-    return list[Math.floor(Math.random * list.length - 1)]
-}
-function sleep(ms) {
-    return new Promise((resolve) => {
-        setTimeout(resolve, ms);
-    });
-} 
-main()
-  </script>
+        }
+
+
+        function random(list) {
+            return list[Math.floor(Math.random * list.length - 1)]
+        }
+        function sleep(ms) {
+            return new Promise((resolve) => {
+                setTimeout(resolve, ms);
+            });
+        }
+        main()
+    </script>
 </body>
 
 </html>
