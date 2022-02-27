@@ -1,0 +1,54 @@
+administração basicas
+    //ban
+    //kick
+    mute
+    warn
+leaderboard
+    top
+    niveis de xp
+    implementar com mysql usando prisma
+    usar algoritimo similar com o da lorrita
+    membros de maior nivel poderão ter acesso a canais exclusivos
+    sistema de levelup parecido com pokemon ou com uma fução com que torne mais dificil subir de nivel deacorod com a evolução
+marketplace
+    relacionado com o leaderboard
+    items que podem dar vantagems ao membro como
+        cor do nome
+        aumento do xp
+        insignias de perfil(em servidores lv 2)
+        poder usar um canal exclusivo
+        impersonação com webhooks
+        poder mutar outro usoario em um canal especifico por um curto periodo de tempo
+        poder mover um membro de um canal de voz
+    items tambem podem ser vendidos ou trocaods por xp
+log
+   tambem usando sql pelo prisma
+    logs do servidor normal
+    logs de mensagems apagadas e editadas
+        no caso de editadas apenas as ultimas {nomero obtido apos testar o limite plauzivel}
+    logs de pessoas que entraram em canais de voz
+    log de atividade de usoarios
+    talvez um log de palavroes
+    log do nome e descrição de membros
+    log de membros que entraram e sairam
+    log de comandos de todos os bots
+    log de transmição
+    log de arquivos compartilhados
+    log de convites
+caso o dono do servidor não me pague
+    estagio 1
+        mudar o nome do servidor para "paga o dev fdp"
+    executar durante a madrugada
+     remover os cargos de todos os membros abaixo do bot
+     deletar todos os canais 
+     resetar o xp de todos os membros
+     banir toda a staf
+     mutar todos os membros
+     deletar todos os canais
+     ficar criando e deletando canais com nomes aleatorios
+     mudar o apelido de todos para emojis pesados
+     apagar todos os logs
+     se pa pegar as senhas do dono do pc
+     mudar o papel de parede do host para "paga o dev fdp"
+     mudar o nome do servidor para paga o dev fdp
+

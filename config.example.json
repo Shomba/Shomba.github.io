@@ -1,0 +1,6 @@
+{
+    "prefix":"#",
+    "clientId": "clientid",
+	"guildId": "testguildid",
+    "token":"bot-token"
+}
