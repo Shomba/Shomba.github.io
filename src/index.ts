@@ -3,7 +3,7 @@
 import { readdir } from "fs"
 import {REST} from "@discordjs/rest"
 import {Routes} from "discord-api-types/v9"
-import { Client, Intents, Collection, Message,Options, Interaction, CommandInteraction, Command } from "discord.js"
+import { Client, Intents, Collection, Message,Options, Interaction, CommandInteraction, Command, ButtonInteraction } from "discord.js"
 const { token, prefix } = require("../config.json")
 import { ActivityTypes } from "discord.js/typings/enums";
 console.log(require('discord.js').version)
@@ -18,58 +18,36 @@ const client = new Client({
         }]
     }
 });
+interface Buttons{
+    [key:string]:{
+        execute:(button:ButtonInteraction) =>  Promise<any>
+    }
+}
 const commands:object[] = []
 client.commands = new Collection()
 readdir('./commands', (err, files) => {
     if (err) { print(err) }
     files.filter(file => file.endsWith('.ts'));
     for (const file of files) {
+        //print(file+": "+typeof require(`./commands/${}`))
         const com = require(`./commands/${file}`)
         commands.push(com.data.toJSON())
         client.commands.set(com.data.name,com)
     }
 })
-
-/*
-var commands = {
-    "ping": {
-        desc: "makes a ping",
-        usage: "",
-        run: (msg: Message) => {
-            console.log("pinged")
-            msg.channel.send("pong");
-        }
-    },
-    "kick": {
-        desc: "kicks a member out of the server",
-        usage: "<user>",
-        run: (msg: Message) => {
-            if (msg.mentions) {
-                let target = msg.mentions.users.first()
-                msg.guild.members.kick(target)
-                msg.channel.send(`${target.username}#${target.discriminator} kicked`)
-            }
-            else {
-                msg.reply("no user mentioned")
-            }
-        }
-    },
-    "ban": {
-        desc: "ban a member",
-        usage: "<user>",
-        run: (msg: Message) => {
-            if (msg.mentions) {
-                let target = msg.mentions.users.first()
-                msg.guild.members.kick(target)
-                msg.channel.send(`${target.username}#${target.discriminator} kicked`)
-            }
-            else {
-                msg.reply("no user mentioned")
-            }
-        }
+const buttons:Buttons= {}
+readdir('./buttons', (err, files) => {
+    if (err) { print(err) }
+    files.filter(file => file.endsWith('.ts'));
+    for (const file of files) {
+        //print(file+": "+typeof require(`./buttons/${}`))
+        const but = require(`./buttons/${file}`)
+        print(`||${typeof but}||: ${but}`)
+        buttons[file.split(".")[0]]= but
     }
-}
-*/
+    print(buttons)
+})
+
 client.once('ready', () => {
     console.log('Ready!');
     const CLIENT_ID = client.user.id
@@ -79,23 +57,39 @@ client.once('ready', () => {
 
     (async ()=>{
         try{
-                print("sending command")
+                print("sending local")
                 await rest.put(Routes.applicationGuildCommands(CLIENT_ID,"742515639499096216"),{
                     body:commands
                 })
-                print("command registred")
+                await rest.put(Routes.applicationGuildCommands(CLIENT_ID,"758777369900744721"),{
+                    body:commands
+                })
+                print("local registred")
+                print("sending global")
+                await rest.put(Routes.applicationCommands(CLIENT_ID),{
+                    body:commands
+                })
+                print("global registred")
         }catch(err){if(err)print(err)}
     })()
 });
 client.on("interactionCreate",async (inter)=>{
-    if(!inter.isCommand()) return
-    const command = client.commands.get(inter.commandName)
+    if(inter.isCommand()){
+        const command = client.commands.get(inter.commandName)
     print(inter.commandName)
     if(!command) return
     try{
-        print(command)
+        //print(command)
         await command.execute(inter)
     }catch(err){if(err){print(err)}}
+    }
+    else if(inter.isButton()){
+        try{
+            //print(command)
+            await buttons[inter.customId].execute(inter)
+        }catch(err){if(err){print(err)}}
+    }
+    
 })
 client.on("messageCreate", (msg:Message) => {
 

@@ -16,10 +16,12 @@
   "dependencies": {
     "@discordjs/builders": "^0.8.2",
     "@discordjs/rest": "^0.1.0-canary.0",
+    "axios": "^0.26.0",
     "discord-api-types": "^0.24.0",
     "discord.js": "^13.6.0",
     "ffmpeg": "^0.0.4",
     "mongodb": "^4.4.0",
+    "node-inspirobot": "^1.0.0",
     "promise-timers": "^1.0.1",
     "promise-tool": "^1.1.5",
     "timers": "^0.1.1",
